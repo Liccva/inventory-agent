@@ -74,3 +74,27 @@ payload.json:
 
 Логи сохраняются в data/log.txt (путь настраивается).
 
+## Структура проекта
+
+```text
+inventory-agent/
+- agent.py                 # Главный исполняемый файл
+- config.ini               # Конфигурационный файл
+- requirements.txt         # Зависимости (только стандартная библиотека)
+- README.md
+  
+   core/
+   - __init__.py
+   - dispatcher.py        # Диспетчер задач
+   - queue_manager.py     # Управление очередями
+
+    services/
+    - __init__.py
+    - inventory_service.py # Сервис инвентаризации с воркерами
+
+    utils/
+    - __init__.py
+    - config_reader.py     # Чтение конфигурации
+    - logger.py            # Настройка логирования
+    - registry_reader.py   # Чтение реестра Windows
+```
