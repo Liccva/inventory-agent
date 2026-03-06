@@ -54,7 +54,7 @@ reboot
 Запустите агент:
 
 ```bash
-python agent.py commands.txt
+python agent.py путь/до/commands.txt
 ```
 ## Результат 
 payload.json:
